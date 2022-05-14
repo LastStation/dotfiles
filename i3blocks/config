@@ -10,7 +10,7 @@ interval=3600
 #BAR_POSITION=top
 #FONT=System San Franscisco Display 10
 LABEL=🌡️
-LOCATION=Ipswich_QLD 
+LOCATION=Location
 #ROFI_CONFIG_FILE=/dev/null
 
 [volume-pulseaudio]

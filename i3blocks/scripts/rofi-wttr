@@ -15,7 +15,7 @@ BAR_POSITION="${BAR_POSITION:-bottom}"
 # see https://github.com/chubin/wttr.in#usage for full configuration options
 print_weather_report() {
   if [[ $LOCATION != " " ]]; then
-    curl https://wttr.in/{ipswich_qld}Q?T
+    curl https://wttr.in/{$LOCATION}Q?T
   else
     curl https://wttr.in/?T
   fi
@@ -25,9 +25,9 @@ print_weather_report() {
 # see https://github.com/chubin/wttr.in#one-line-output for formatting options
 print_weather_line() {
   if [[ $LOCATION != " " ]]; then
-    curl -s https://wttr.in/{ipswich_qld}?m\&format="%C+%c+%t+(%f)+%w" | tr -d \"
+    curl -s https://wttr.in/{$LOCATION}?m\&format="%C+%c+%t+(%f)+%w" | tr -d \"
   else
-    curl -s 'https://wttr.in/{ipswich_qld}?m\&format="%C+%c+%t+(%f)+%w"' | tr -d \"
+    curl -s 'https://wttr.in/{$LOCATION}?m\&format="%C+%c+%t+(%f)+%w"' | tr -d \"
   fi
 }
 
